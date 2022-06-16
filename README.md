@@ -1,5 +1,8 @@
 # nmap-cli
 ### 使用方法
+git clone https://github.com/ShadowFl0w/nmap-cli.git
+cd nmap-cli
+go build
 ./nmap-cli -f ./hostip.txt -o nmap.txt
 
 ### 输入的文件
