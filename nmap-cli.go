@@ -1,10 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"bytes"
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -40,6 +42,36 @@ func main() {
 	}
 }
 
+//结果处理
+func handleOutput(outputString string) {
+	resultFile, err := os.OpenFile(*outputFile, os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Println(nil)
+		os.Exit(1)
+	}
+	defer resultFile.Close()
+	writer := bufio.NewWriter(resultFile)
+	writer.WriteString(outputString)
+	writer.Flush()
+	// bufwriter := bufio.NewWriter(writer)
+	// sb := &strings.Builder{}
+
+	// for port := range ports {
+	// 	sb.WriteString(host)
+	// 	sb.WriteString(":")
+	// 	sb.WriteString(strconv.Itoa(port))
+	// 	sb.WriteString("\n")
+
+	// 	_, err := bufwriter.WriteString(sb.String())
+	// 	if err != nil {
+	// 		bufwriter.Flush()
+	// 		return err
+	// 	}
+	// 	sb.Reset()
+	// }
+	// return bufwriter.Flush()
+}
+
 //调用nmap
 func nmap(args []string) {
 	// cmd := exec.Command(args[0], args[1:]...)
@@ -61,6 +93,7 @@ func nmap(args []string) {
 		fmt.Println(err.Error(), stderr.String())
 	} else {
 		fmt.Println(out.String())
+		handleOutput(out.String())
 	}
 
 }
@@ -75,7 +108,6 @@ func getArgs(ip string) (results []string) {
 	args = append(args, "-sV")
 	args = append(args, ip)
 	args = append(args, "-p", portsStr)
-	args = append(args, "-oN", *outputFile)
 	return args
 }
 
