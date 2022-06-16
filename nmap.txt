@@ -1,18 +1,6 @@
-Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-16 14:49 CST
-Nmap scan report for 172.16.42.150
-Host is up (0.00067s latency).
-
-PORT      STATE  SERVICE    VERSION
-3305/tcp  closed odette-ftp
-33033/tcp open   http       SimpleHTTPServer 0.6 (Python 2.7.16)
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 6.38 seconds
-
-Nmap done: 1 IP address (1 host up) scanned in 6.43 seconds
-Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-16 14:49 CST
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-16 14:50 CST
 Nmap scan report for 172.16.42.151
-Host is up (0.00034s latency).
+Host is up (0.00042s latency).
 
 PORT     STATE  SERVICE    VERSION
 8080/tcp closed http-proxy
@@ -20,10 +8,10 @@ PORT     STATE  SERVICE    VERSION
 8082/tcp open   http       SimpleHTTPServer 0.6 (Python 2.7.16)
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 6.41 seconds
-Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-16 14:49 CST
+Nmap done: 1 IP address (1 host up) scanned in 6.38 seconds
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-16 14:51 CST
 Nmap scan report for 172.16.42.150
-Host is up (0.00051s latency).
+Host is up (0.00049s latency).
 
 PORT      STATE  SERVICE    VERSION
 3305/tcp  closed odette-ftp
