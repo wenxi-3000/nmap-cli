@@ -1,6 +1,6 @@
 # nmap-cli
 ### 说明
-将host:ip格式的文件读取，进行处理，交给nmap探测，保存结果
+读取host:ip格式文件，进行处理，交给nmap探测，保存结果
 ### 使用方法
 git clone https://github.com/ShadowFl0w/nmap-cli.git<br>
 cd nmap-cli<br>
