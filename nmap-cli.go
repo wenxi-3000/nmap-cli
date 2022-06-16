@@ -44,7 +44,7 @@ func main() {
 
 //结果处理
 func handleOutput(outputString string) {
-	resultFile, err := os.OpenFile(*outputFile, os.O_WRONLY|os.O_APPEND, 0666)
+	resultFile, err := os.OpenFile(*outputFile, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
 		log.Println(nil)
 		os.Exit(1)
@@ -53,23 +53,6 @@ func handleOutput(outputString string) {
 	writer := bufio.NewWriter(resultFile)
 	writer.WriteString(outputString)
 	writer.Flush()
-	// bufwriter := bufio.NewWriter(writer)
-	// sb := &strings.Builder{}
-
-	// for port := range ports {
-	// 	sb.WriteString(host)
-	// 	sb.WriteString(":")
-	// 	sb.WriteString(strconv.Itoa(port))
-	// 	sb.WriteString("\n")
-
-	// 	_, err := bufwriter.WriteString(sb.String())
-	// 	if err != nil {
-	// 		bufwriter.Flush()
-	// 		return err
-	// 	}
-	// 	sb.Reset()
-	// }
-	// return bufwriter.Flush()
 }
 
 //调用nmap
