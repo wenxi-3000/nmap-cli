@@ -1,6 +1,6 @@
 # nmap-cli
 ### 说明
-读取host:ip格式文件，该文件是存活的主机端口，交给nmap进行指纹识别，保存结果。
+读取ip:port格式文件，该文件是存活的主机端口，交给nmap进行指纹识别，保存结果。
 ### 使用方法
 git clone https://github.com/ShadowFl0w/nmap-cli.git<br>
 cd nmap-cli<br>
